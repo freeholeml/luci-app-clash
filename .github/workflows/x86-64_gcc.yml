@@ -1,7 +1,13 @@
 on:
+  release:
+    types: [published]
+
   push:
     branches: 
-      - test
+      - master
+
+  schedule:
+    - cron: 0 11 * * 3    
 
 name: luci-app-clash
 jobs:
